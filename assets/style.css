@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.float-cart{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background-color: #ebc100e8;
+    box-shadow: 2px 2px 5px -5px black;
+    border-radius: 50%;
+
+}
+.float-cart img{
+    width: 31px;
+    height: 36px;
+    padding: 2px;
+}
+.cart-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+}
+.cart-button .product-counts{
+    position: absolute;
+    right: -10px;
+    top: -20px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icons img{
+    width: 30px;
+    margin: 0 10px;
+   
+    padding: 5px;
+   
+}
+
+.product-counts{
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background-color: maroon;
+    color: white;
+    width: 39px;
+    height: 39px;
+}
+
+.cart-item-image{
+    position: relative;
+}
+.offer{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.button-group input{
+    width: 45px;
+    text-align: center;
+    border-radius: 0 !important;
+    border: 0;
+    background-color: rgb(234, 234, 234);
+    margin: 0;
+    padding: 3px;
+}
+.button-group .plus{
+    margin: 0;
+    padding: 2px 8px;
+    border: 0;
+    background: #1ac100;
+    color: white;
+}
+.button-group .minus {
+    margin: 0;
+    padding: 2px 11px;
+    background: #ff00008c;
+    border: 0;
+    color: white;
+}
+.product-categorie{
+    display: flex;
+    justify-content: center;
+}

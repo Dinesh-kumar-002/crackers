@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css" >
+</head>
+<body>
+    <!-- floating icon  -->
+
+    <div class="float-cart">
+        <button class="btn cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+            <p class="product-counts">10</p>
+            <img src="assets/icons/cart.png" alt="">
+        </button>
+    </div>
+
+    <!-- floating icon  -->
+
+
+
+
+
+    <!-- cart canvas  -->
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Your Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="cart-list">
+                <div class="cart item">
+                    <div class="row">
+                        <div class="col-4 " style="    display: flex;justify-content: center;align-items: flex-end;">
+                            <div class="cart-item-image">
+                                <div class="offer">50% Off</div>
+                                <img src="assets/products/product.png" alt="" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="cart-item-details">
+                                <p class="text-dark">Product Name</p>
+                                <div class="d-flex">
+                                    <p class="strike-price">
+                                        ₹ 500 
+                                    </p>
+                                    <p class="fixed-price">
+                                        ₹ 250 
+                                    </p>
+        
+                                </div>
+                                <div class="add-to-cart-button d-flex">
+                                    <div class="product-categorie">
+                                       
+                                        <div class="button-group">
+                                            <button class="minus">-</button>
+                                            <input type="text" name="qnt" id="qnt" value="1">
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- cart canvas  -->
+
+
+    <!-- user canvas  -->
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Login</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="cart-list">
+                <div class="cart item">
+                    <div class="cart-item-image"></div>
+                    <div class="cart-item-details"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- user canvas  -->
+
+
+
+
+    <!-- navigation -->
+
+    <section>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Logo</a>
+                    <div class="icons">
+                        <img src="assets/icons/search.png" alt="">
+                        <img src="assets/icons/heart.png" alt="">
+
+
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
+                            <img src="assets/icons/user.png" alt="">
+                        </button>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+    </section>
+
+    <!-- navigation -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
