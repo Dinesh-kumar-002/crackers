@@ -1,138 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css" >
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VMPS Crackers</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
     <!-- floating icon  -->
 
     <div class="float-cart">
-        <button class="btn cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-            <p class="product-counts">10</p>
-            <img src="assets/icons/cart.png" alt="">
-        </button>
+      <button
+        class="btn cart-button"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasCart"
+        aria-controls="offcanvasCart"
+      >
+        <p class="product-counts">10</p>
+        <img src="assets/icons/cart.png" alt="" />
+      </button>
     </div>
 
     <!-- floating icon  -->
 
+    <!-- floating button  -->
+    <div class="price-sticky d-flex justify-content-between">
+      <button>
+        CHECKOUT
+        <i class="fa fa-shopping-cart"></i>
+      </button>
 
-
-
+      <button>Total <span> ₹ 10,000 /-</span></button>
+    </div>
+    <!-- floating button  -->
 
     <!-- cart canvas  -->
-    
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Your Cart</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="cart-list">
-                <div class="cart item">
-                    <div class="row">
-                        <div class="col-4 " style="    display: flex;justify-content: center;align-items: flex-end;">
-                            <div class="cart-item-image">
-                                <div class="offer">50% Off</div>
-                                <img src="assets/products/product.png" alt="" width="100%">
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="cart-item-details">
-                                <p class="text-dark">Product Name</p>
-                                <div class="d-flex">
-                                    <p class="strike-price">
-                                        ₹ 500 
-                                    </p>
-                                    <p class="fixed-price">
-                                        ₹ 250 
-                                    </p>
-        
-                                </div>
-                                <div class="add-to-cart-button d-flex">
-                                    <div class="product-categorie">
-                                       
-                                        <div class="button-group">
-                                            <button class="minus">-</button>
-                                            <input type="text" name="qnt" id="qnt" value="1">
-                                            <button class="plus">+</button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasCart"
+      aria-labelledby="offcanvasCartLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="tabs">
+          <li class="tab current" data-tab="tab-1">
+            Cart <img src="assets/icons/heart.png" alt="" />
+          </li>
+          <li class="tab" data-tab="tab-2">
+            Wishlists <img src="assets/icons/cart.png" alt="" />
+          </li>
+        </ul>
+        <div id="tab-1" class="tab-content current">
+          <h2>Cart</h2>
+          <!-- Your content here -->
+          <div class="row">
+            <div class="col-12">
+              <div class="cart-item">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="cart-item-image">
+                      <div class="offer">50% Off</div>
+                      <img
+                        src="assets/other-images/vmps.jpg"
+                        alt=""
+                        width="100%"
+                      />
                     </div>
-                    
-                    
+                  </div>
+                  <div class="col-8">
+                    <div class="cart-item-details">
+                      <p class="text-dark product-name">5" Bahubali-25play</p>
+                      <div class="d-flex">
+                        <p class="strike-price">
+                          ₹ 500
+                          <span class="measure"> / Box </span>
+                        </p>
+                        <p class="fixed-price">
+                          ₹ 250
+                          <span class="measure"> / Box </span>
+                        </p>
+                      </div>
+                      <div
+                        class="add-to-cart-button d-flex justify-content-between"
+                      >
+                        <div class="product-categorie">
+                          <div class="button-group">
+                            <button class="minus">-</button>
+                            <input type="text" name="qnt" class="qty" />
+                            <button class="plus">+</button>
+                          </div>
+                          <button class="btn btn-success rounded-0 add-to-cart">
+                            Add to Cart
+                          </button>
+                        </div>
+                        <p class="total-indiv-price">
+                          ₹ <span class="real-price">1000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Your content here -->
         </div>
+        <div id="tab-2" class="tab-content">
+          <h2>Wishlists</h2>
+          <!-- Your content here -->
+        </div>
+      </div>
     </div>
-    
+
     <!-- cart canvas  -->
 
-
     <!-- user canvas  -->
-    
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Login</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="cart-list">
-                <div class="cart item">
-                    <div class="cart-item-image"></div>
-                    <div class="cart-item-details"></div>
-                </div>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasUser"
+      aria-labelledby="offcanvasUserLabel"
+    >
+      <div class="offcanvas-header">
+        <!-- <h5 id="offcanvasRightLabel">Login</h5> -->
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper">
+          <div class="title-text">
+            <div class="title login">Login</div>
+            <div class="title signup">Signup</div>
+          </div>
+          <div class="form-container">
+            <div class="slide-controls">
+              <input type="radio" name="slide" id="login" checked />
+              <input type="radio" name="slide" id="signup" />
+              <label for="login" class="slide login">Login</label>
+              <label for="signup" class="slide signup">Signup</label>
+              <div class="slider-tab"></div>
             </div>
+            <div class="form-inner">
+              <form action="#" class="login">
+                <div class="field">
+                  <input type="text" placeholder="Email Address" required />
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <!-- <div class="pass-link"><a href="#">Forgot password?</a></div> -->
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Login" />
+                </div>
+                <div class="signup-link">
+                  Not a member? <a href="">Signup</a>
+                </div>
+              </form>
+              <form action="#" class="signup">
+                <div class="field">
+                  <input type="number" placeholder="Phone Number" required />
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <div class="field">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Signup" />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <!-- user canvas  -->
-
-
-
 
     <!-- navigation -->
 
     <section class="nav-section">
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand">Logo</a>
-                    <div class="icons">
-                        <img src="assets/icons/search.png" alt="">
-                        <img src="assets/icons/heart.png" alt="">
+      <div class="container-fluid p-0">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand">
+              <img src="assets/other-images/vmps.jpg" alt="" width="90px" />
+            </a>
+            <div class="icons">
+              <img src="assets/icons/search.png" alt="" />
+              <button
+                class="btn p-0"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasCart"
+                aria-controls="offcanvasCart"
+              >
+                <img src="assets/icons/heart.png" alt="" />
+              </button>
 
-
-                        <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
-                            <img src="assets/icons/user.png" alt="">
-                        </button>
-                        
-                    </div>
-                </div>
-            </nav>
-        </div>
-        
+              <button
+                class="btn p-0"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasUser"
+                aria-controls="offcanvasUser"
+              >
+                <img src="assets/icons/user.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </section>
 
     <!-- navigation -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 col-xxl-4">
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-4">
+                  <div class="cart-item-image">
+                    <div class="offer">50% Off</div>
+                        <div class="swiper mySwiper-product">
+                            <div class="swiper-wrapper ">
+                            <div class="swiper-slide">
+                                <img src="assets/other-images/vmps.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/other-images/vmps.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/other-images/vmps.jpg" alt="">
+                            </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="cart-item-details">
+                    <p class="text-dark product-name">5" Bahubali-25play</p>
+                    <div class="d-flex">
+                      <p class="strike-price">
+                        ₹ 500
+                        <span class="measure"> / Box </span>
+                      </p>
+                      <p class="fixed-price">
+                        ₹ 250
+                        <span class="measure"> / Box </span>
+                      </p>
+                    </div>
+                    <div
+                      class="add-to-cart-button d-flex justify-content-between"
+                    >
+                      <div class="product-categorie">
+                        <div class="button-group">
+                          <button class="minus">-</button>
+                          <input type="text" name="qnt" class="qty" />
+                          <button class="plus">+</button>
+                        </div>
+                        <button class="btn btn-success rounded-0 add-to-cart">
+                          Add to Cart
+                        </button>
+                      </div>
+                      <p class="total-indiv-price">
+                        ₹ <span class="real-price">1000</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fire"></section>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- jsDelivr  -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+    <!-- UNPKG -->
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Usage -->
+    <script>
+      
+      const container = document.querySelector("#fire");
+      const fireworks = new Fireworks.default(container);
+      fireworks.start();
+
+      var swiper = new Swiper(".mySwiper-product", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+
+    </script>
+
     <script src="assets/script.js"></script>
-</body>
+  </body>
 </html>
