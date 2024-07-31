@@ -15,7 +15,6 @@ jQuery(function() {
     });
 
 
-
     $('.minus').on('click',function(){
         
         var grand_parent = $(this).parents().eq(1);
@@ -40,20 +39,43 @@ jQuery(function() {
 
 
 
-
-
     // tabbing for cart and wishlits 
+
     $('ul.tabs li').on('click', function(){
-        // get the data attribute
         var tab_id = $(this).attr('data-tab');
-        // remove the default classes
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
-        // add new classes on mouse click
         $(this).addClass('current');
         $('#'+tab_id).addClass('current');
       });
+
     // tabbing for cart and wishlits 
+
+
+    //   heart 
+
+    $(".heart").toggleClass("on");
+    $(".heart").on("click", function () {
+        $(this).toggleClass("on");
+    });
+    
+    //   heart 
+
+
+    // search eneble 
+    $('.search-input').hide();
+        $(".search-icon").on('click',function(){
+            $('.search-input').toggle();
+            $('.button-addon2').trigger('focus');
+            $('.button-addon2').css('background','green');
+            setTimeout(() => {
+                
+                $('.button-addon2').css('background','white');
+            }, 500);
+
+        })
+    // search eneble 
+      
 
 
 });
